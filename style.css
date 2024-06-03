@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+html {
+    width: 100%;
+    height: 100%;
+    background-image: url('./ht.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.name-header{
+    font-family: "Dancing Script";
+    font-size: 80px;
+    color: #fff;
+    margin-right: 10%;
+    margin-top: -20%;
+}
+.start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    text-decoration: none;
+    width: 300px;
+    height: 100px;
+    border: 2px solid white;
+    animation-duration: 2s;
+    border-radius: 10px;
+}
+
+.start-btn {
+    text-decoration: none;
+    font-family: VT323;
+    font-size: 60px;
+    color: white;    
+}
+
+.start:hover {
+    background-color: white;
+}
+
+.start-btn:hover {
+    color: black;
+}
+
+.container {
+    position: relative;
+    padding: 10px;
+    margin-top: -20%;
+    margin-right: -5%;
+}
+
+.container .song-info {
+    background-color: #000;
+    margin: 0 15px;
+    padding: 15px 15px 5px 150px;
+    border-radius: 15px 15px 0 0;
+}
+
+.container .song-info .song-name {
+    color: #b9b9b9;
+    font-size: 14px;
+    margin: 3px 0 20px;
+}
+
+.container .song-info .artist-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.container .song-info .progress-bar {
+    background-color: #505050;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container .song-info .progress-bar .fill-bar {
+    width: 0;
+    height: 6px;
+    border-radius: 20px;
+    background: #1db954;
+}
+
+.container .song-info .time {
+    font-size: 15px;
+    color: #b9b9b9;
+    margin: 10px 0;
+}
+
+.container .disk {
+    max-width: 120px;
+}
+
+.container .disk .active {
+    animation: rotate 3s linear 0s infinite forwards;
+}
+
+.container .disk .cover {
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: url("assets/1.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.container .disk .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 15%;
+    top: 29%;
+    background-color: #fff;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.container .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #292929;
+    width: 450px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.container .controls #play {
+    background-color: #1db954;
+    color: #fff;
+    padding: 15px 17px 14px 18px;
+    font-size: 28px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.container .controls #play:hover {
+    background: #189945;
+}
+
+.container .controls i {
+    padding: 30px 8px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #919191;
+    transition: all 0.3s ease;
+}
+
+.container .controls i:hover {
+    color: #fff;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+* {
+    font-weight: bold;
+    font-family: VT323;
+}
+
+ul {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    width: 300px;
+}
+
+ul li a {
+    display: block;
+    width: 210px;
+    height: 80px;
+    text-align: left;
+    padding-left: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    position: relative;
+    transform: rotate(0deg) skew(0deg);
+}
+
+ul li a .fa-brands {
+    font-size: 40px;
+    color: white;
+    line-height: 80px;
+    padding-right: 14px;
+}
+
+ul li a span {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    color: white;
+    font-size: 28px;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+
+ul li a:before {
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 38px;
+    transition: 0.5s;
+    transform: rotate(0deg) skew(-45deg);
+}
+
+ul li a:hover {
+    text-decoration: none;
+    transform: rotate(-30deg) skew(25deg);
+    box-shadow: -30px 20px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.footer ul {
+    height: 150px;
+    margin-top: 33%;
+}
+
+/* ------------------------------------------------------ Responsive Design--------------------------------------- */
+@media only screen and (max-width: 600px) and (min-height: 500px)  {
+
+    html{
+        background-image: url('./ht1.jpg');
+    }
+    .name-header{
+        font-family: "Dancing Script";
+        margin-top: -600px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .container .song-info {
+        padding: 10px;
+    }
+    .container{
+        margin-top: 95%;
+        right: 17%;
+    }
+    .container .disk{
+        margin-top: 20%;
+    }
+    .container .disk .cover{
+        left: 15%;
+    }
+    .container .song-info {
+        height: 100px;
+        margin-top: 70%;
+    }
+    .container .song-info .song-name
+     {
+        font-size: 15px;
+        width: 120px;
+        height: 100px;
+     
+    }
+   
+    .container .song-info .progress-bar{
+        margin-top: -55%;
+    }
+    .container .song-info .time{
+        text-align: center;
+    }
+
+    .container .controls {
+        margin-top: -30%;
+        width: 210px;
+        height: 80px;
+    }
+
+    .container .controls i {
+        padding: 20px 5px;
+        font-size: 25px;
+    }
+
+    .container .controls #play {
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+
+
+    ul {
+        flex-direction: column;
+        top: 60%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        width: 90%;
+        height: 70px;
+    }
+
+    ul li a .fa-brands {
+        /* font-size: 30px; */
+        line-height: 60px;
+    }
+
+    ul li a span {
+        /* font-size: 20px; */
+        margin-top: -5%;
+    }
+
+    .footer ul {
+        margin-top: 20%;
+        left: 10%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 1024px)  {
+
+    html{
+        background-image: url('./ht1.jpg');
+    }
+    .name-header{
+        font-family: "Dancing Script";
+        margin-top: -600px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .container .song-info {
+        padding: 10px;
+    }
+    .container{
+        margin-top: 80%;
+        right: 10%;
+    }
+    .container .disk{
+        margin-top: 20%;
+    }
+    .container .disk .cover{
+        left: 15%;
+    }
+
+    .container .song-info {
+        height: 100px;
+        margin-top: 70%;
+    }
+    .container .song-info .song-name
+     {
+        font-size: 15px;
+        width: 120px;
+        height: 100px;
+     
+    }
+   
+    .container .song-info .progress-bar{
+        margin-top: -55%;
+    }
+    .container .song-info .time{
+        text-align: center;
+    }
+
+    .container .controls {
+        margin-top: -30%;
+        width: 210px;
+        height: 80px;
+    }
+
+    .container .controls i {
+        padding: 20px 5px;
+        font-size: 25px;
+    }
+
+    .container .controls #play {
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+
+
+    ul {
+        flex-direction: column;
+        top: 60%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        width: 90%;
+        height: 70px;
+    }
+
+    ul li a .fa-brands {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    ul li a span {
+        font-size: 20px;
+        margin-top: -5%;
+    }
+
+    .footer ul {
+        margin-top: 20%;
+        left: 40%;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 600px)  {
+
+    html{
+        background-image: url('./ht.jpg');
+    }
+    .name-header{
+        font-family: "Dancing Script";
+        margin-top: -200px;
+        color: #fff;
+        font-size: 40px;
+        margin-right: 25%;
+    }
+    .container .song-info {
+        padding: 10px;
+    }
+    .container{
+        margin-top: 15%;
+        right: 15%;
+    }
+    .container .disk{
+        margin-top: 20%;
+    }
+    .container .disk .cover{
+        left: 15%;
+    }
+
+    .container .song-info {
+        height: 100px;
+        margin-top: 70%;
+    }
+    .container .song-info .song-name
+     {
+        font-size: 15px;
+        width: 120px;
+        height: 100px;
+     
+    }
+   
+    .container .song-info .progress-bar{
+        margin-top: -55%;
+    }
+    .container .song-info .time{
+        text-align: center;
+    }
+
+    .container .controls {
+        margin-top: -30%;
+        width: 210px;
+        height: 80px;
+    }
+
+    .container .controls i {
+        padding: 20px 5px;
+        font-size: 25px;
+    }
+
+    .container .controls #play {
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+
+
+    ul {
+        flex-direction: column;
+        top: 60%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        width: 90%;
+        height: 70px;
+    }
+
+    ul li a .fa-brands {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    ul li a span {
+        font-size: 20px;
+        margin-top: -5%;
+    }
+
+    .footer ul {
+        margin-top: 0%;
+        left: 20%;
+
+    }
+}
+
+@media only screen and (min-width: 375px) and (min-height: 812px)  {
+
+    html{
+        background-image: url('./ht1.jpg');
+    }
+    .name-header{
+        font-family: "Dancing Script";
+        margin-top: -600px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .container .song-info {
+        padding: 10px;
+    }
+    .container{
+        margin-top: 80%;
+        right: 17%;
+    }
+    .container .disk{
+        margin-top: 20%;
+    }
+    .container .disk .cover{
+        left: 15%;
+    }
+
+    .container .song-info {
+        height: 100px;
+        margin-top: 70%;
+    }
+    .container .song-info .song-name
+     {
+        font-size: 15px;
+        width: 120px;
+        height: 100px;
+     
+    }
+   
+    .container .song-info .progress-bar{
+        margin-top: -55%;
+    }
+    .container .song-info .time{
+        text-align: center;
+    }
+
+    .container .controls {
+        margin-top: -30%;
+        width: 200px;
+        height: 80px;
+    }
+
+    .container .controls i {
+        padding: 20px 5px;
+        font-size: 25px;
+    }
+
+    .container .controls #play {
+        font-size: 20px;
+        padding: 10px 12px;
+    }
+
+
+    ul {
+        flex-direction: column;
+        top: 60%;
+    }
+
+    ul li {
+        width: 100%;
+    }
+
+    ul li a {
+        width: 90%;
+        height: 70px;
+    }
+
+    ul li a .fa-brands {
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    ul li a span {
+        font-size: 20px;
+        margin-top: -5%;
+    }
+
+    .footer ul {
+        margin-top: 20%;
+        left: 10%;
+    }
+}
